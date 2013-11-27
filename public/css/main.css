@@ -81,19 +81,35 @@ li {
   text-align: center;
 }
 
-A:link {color:black;}
-A:link {text-decoration: none}
-A:visited {text-decoration: none;
-color:black;
+li a:link {
+  color:black;
 }
-A:active {text-decoration: none}
-A:hover {text-decoration: underline; color: purple;}
+
+li a:link {
+  text-decoration: none
+}
+
+li a:visited {
+  text-decoration: none;
+  color:black;
+}
+
+
+li a:active {
+  text-decoration: none
+}
+
+li a:hover {
+  text-decoration: underline; color: purple;
+}
+
 body
 {
   background: white;
   height: 0px;
 }
-/*body {
+
+body {
   width: auto;
 }
 
@@ -109,7 +125,7 @@ body
   margin: 30px;
 }
 
-h1 {
+h1#first {
   color: #99956;
   font-size: 50px;
   font-family: 'La Belle Aurore', cursive;
@@ -156,7 +172,7 @@ div#box_links a:hover {
 }
 /*------------------------*/
 
-/*section#page2 {
+section#page2 {
   height: 850px;
   background-color: #1142FF;
   background-image: url("http://www.sendchristinatohackerschool.com/texture.png");
@@ -179,7 +195,7 @@ img#creative_process {
   width: 950px;
   height: auto;
   margin-top: 80px;
-}*/
+}
 
 /* footer */
 .wrapper {

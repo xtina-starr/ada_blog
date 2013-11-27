@@ -1,6 +1,6 @@
   <section id="page1"><br>
     <div class="text">
-      <h1>Free Your Mind And The Rest Will Follow</h1>
+      <h1 id="first">Free Your Mind And The Rest Will Follow</h1>
       <img src="http://data3.whicdn.com/images/59913109/large.gif" alt="infinity symbol">
       <p>Art/Culture/Love/Authenticity</p>
     </div>
@@ -15,10 +15,8 @@
       <h2>The Process</h2>
       <img id="creative_process"src="http://isculpture.files.wordpress.com/2011/09/img2142.jpg">
       <script>
-      $( "#box1" ).click(function() {
-      $( "#page2" ).slideDown( "slow", function() {
-      // Animation complete.
-      });
+      $('a#page2').click(function() {
+      $('html,body').animate({'scrollTop' : 0},1000);
       });
       </script>
     </div>
