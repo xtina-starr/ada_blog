@@ -1,2 +1,45 @@
 <!-- index.erb -->
-Hello, the current time is <%= Time.now %>
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+  <title>Stylistic</title>
+  <link href='http://fonts.googleapis.com/css?family=La+Belle+Aurore' rel='stylesheet' type='text/css'>
+  <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100">
+  <link href='http://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>
+  <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Londrina+Shadow"></link>
+
+  <script src='jquery.js'></script>
+  <script src='jquery.transit.js'></script>
+   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+</head>
+
+<body>
+  <section id="page1"><br>
+    <div class="text">
+      <h1>Free Your Mind And The Rest Will Follow</h1>
+      <img src="http://data3.whicdn.com/images/59913109/large.gif" alt="infinity symbol">
+      <p>Art/Culture/Love/Authenticity</p>
+    </div>
+    <div id="box_links">
+      <div id="box1"><span class="boxes"><a href="#page2">Create</a></span></div>
+      <div id="box2"><span class="boxes"><a href="www.christinasthompson">Share</a></span></div>
+      <div id="box3"><span class="boxes"><a href="www.christinasthompson">Repeat</a></span></div>
+    </div>
+  </section>
+  <section id="page2">
+    <div id="the-process">
+      <h2>The Process</h2>
+      <img id="creative_process"src="http://isculpture.files.wordpress.com/2011/09/img2142.jpg">
+      <script>
+      $( "#box1" ).click(function() {
+      $( "#page2" ).slideDown( "slow", function() {
+      // Animation complete.
+      });
+      });
+      </script>
+    </div>
+  </section>
+</body>
+
+</html>
