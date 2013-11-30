@@ -1,218 +1,160 @@
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
-    border: 0 none;
-    font: inherit;
-    margin: 0;
-    padding: 0;
-    vertical-align: baseline;
-}
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-    display: block;
-}
-blockquote, q {
-    quotes: none;
-}
-blockquote:before, blockquote:after, q:before, q:after {
-    content: none;
-}
-ins {
-    background-color: #FFFF99;
-    color: #000000;
-    text-decoration: none;
-}
-mark {
-    background-color: #FFFF99;
-    color: #000000;
-    font-style: italic;
-    font-weight: bold;
-}
-del {
-    text-decoration: line-through;
-}
-abbr[title], dfn[title] {
-    border-bottom: 1px dotted;
-    cursor: help;
-}
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-hr {
-    -moz-border-bottom-colors: none;
-    -moz-border-left-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-top-colors: none;
-    border-color: #CCCCCC -moz-use-text-color -moz-use-text-color;
-    border-image: none;
-    border-right: 0 none;
-    border-style: solid none none;
-    border-width: 1px 0 0;
-    display: block;
-    height: 1px;
-    margin: 1em 0;
-    padding: 0;
-}
-input, select {
-    vertical-align: middle;
+/*Insert CSS Below*/
+
+#social-links {
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 
-/*Insert CSS below*/
-
-#main-container {
-  width: 960px;
-  margin: auto;
-}
-img.center {   
-  display: block; 
-  margin-left: auto; 
-  margin-right: auto;}
-  
-.navbar {
-  width: 960px;
-  word-spacing: 130px;
-}
-
-ul {
-  text-align: center;
-}
-
-li {
-  font-family: arial;
-  display: inline;
-  text-align: center;
-}
-
-li a:link {
-  color:black;
-}
-
-li a:link {
-  text-decoration: none
-}
-
-li a:visited {
-  text-decoration: none;
-  color:black;
-}
-
-
-li a:active {
-  text-decoration: none
-}
-
-li a:hover {
-  text-decoration: underline; color: purple;
-}
-
-body
-{
-  background: white;
-  height: 0px;
+#facebook {
+    margin-left: -10px;
 }
 
 body {
-  width: auto;
+    margin: 0 auto;
 }
 
-#page1 {
-  background-image: url("http://dustin.me/images/site-bg.jpg");
-  background-repeat: repeat;
-  width: auto;
-  height: 850px;
+header h1#logo {
+    font-size: 100px;
+    font-family: 'Cutive Mono', serif;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
-.text {
-  text-align: center;
-  margin: 30px;
+nav {
+    text-align: center;
+    border-bottom: 2px solid #333;
 }
 
-h1#first {
-  color: #99956;
-  font-size: 50px;
-  font-family: 'La Belle Aurore', cursive;
-  margin-bottom: 10px;
+ul {
+    margin-bottom: 30px;
 }
 
-p {
-  color: #99956;
-  font-size: 45px;
-  font-family: 'Roboto Slab',serif;
-  font-weight: 100;
-  width: auto;
+/* undoing the below will make the blog post show*/
+
+ul#drop-down {
+    display: none;
 }
 
-div#box_links div {
-  width: 120px;
-  border: 1px solid #333;
-  display: inline-block;
-  font-family: arial;
-  margin: 20px;
+ul li#blog:hover ul#drop-down{
+    display: inline-block;
+    position: absolute;
+    margin-top: 30px;
+    margin-left: -120px;
+    list-style: none;
 }
 
-div#box_links {
-  text-align: center;
+ul li.nav {
+    display: inline;
+    margin: 40px;
+    font-family: 'La Belle Aurore', cursive;
+    font-size: 30px;
+} 
+
+li.nav a {
+    text-decoration: none;
+    color: black;
 }
 
-
-
-div#box_links a {
-  text-align: center;
-  margin: 0 auto;
-  display: block;
-  line-height: 60px;
-  text-decoration: none;
-  color: #333;
-  border: 1px solid #333;
+li.nav a:hover:before {
+    content: "[:";
 }
 
-
-
-div#box_links a:hover {
-  color: white;
-  background-color: #333;
-}
-/*------------------------*/
-
-section#page2 {
-  height: 850px;
-  background-color: #1142FF;
-  background-image: url("http://www.sendchristinatohackerschool.com/texture.png");
-  transition: all 0.6s ease-in-out;
+li.nav a:hover:after {
+    content: "]"
 }
 
-h2 {
-  font-family: 'Londrina Shadow',cursive;
-  font-weight: 300;
-  font-size: 50px;
-  color: rgb(230, 230, 230);
-  padding-top: 45px;
+li.nav a:hover {
+    font-family: arial;
+    text-transform: lowercase;
+    font-size: 25px;
+
 }
 
-div#the-process {
-  text-align: center;
-}
-
-img#creative_process {
-  width: 950px;
-  height: auto;
-  margin-top: 80px;
-}
-
-/* footer */
-.wrapper {
-min-height: 100%;
-height: auto !important;
-height: 100%;
-margin: 0 auto -142px; /* the bottom margin is the negative value of the footer's height */
-}
-.footer{
-height: 142px; /* .push must be the same height as .footer */
-}
-
-
-/*div#coolfooter {
-  background-color: #333;
-  height: 40px;
-  width: auto;
+/* home page */
+/*section#body {
+    background-image: url(http://3.bp.blogspot.com/-4a_a41fX8pI/UTT2zb2AzfI/AAAAAAAAAnQ/F6tGjFoLij0/s1600/Teal+Chevron.jpg); 
+    padding-bottom: 40px;
+    /*height: 470px;*/
 }*/
 
-*/
+div#coder {
+    text-align: center;
+}
+
+img#background {
+    border: 1px solid #333;
+    margin-top: 60px;
+}
+
+/* about page */
+
+/*section#about {
+    background-image: url(http://3.bp.blogspot.com/-4a_a41fX8pI/UTT2zb2AzfI/AAAAAAAAAnQ/F6tGjFoLij0/s1600/Teal+Chevron.jpg); 
+    padding-bottom: 40px
+    /*margin-top: -17px;*/ /*fix this*/
+}*/
+
+div#about-content {
+    width: 650px;
+    height: auto;
+    background: #E6E6E6;
+    margin: auto;
+    height: auto;
+    padding: 3px 20px 3px 20px;
+    border: 2px solid white;
+    text-align: justify;
+    margin-top: 40px;
+}
+
+div#about-content p {
+    font-family: 'Roboto Slab',serif;
+    font-weight: 400;
+}
+
+/* blog page */
+
+/*section#blog {
+    background-image: url(http://3.bp.blogspot.com/-4a_a41fX8pI/UTT2zb2AzfI/AAAAAAAAAnQ/F6tGjFoLij0/s1600/Teal+Chevron.jpg); 
+    height: 900px;
+    /*margin-top: -17px;*/ /*fix this*/
+}*/
+
+div.row1 {
+    width: 750px;
+    height: 300px;
+    background-color: #93FFE8;
+    border: 1px dashed white;
+    display: inline-block;
+    margin: 60px 20px 60px 20px;
+}
+
+div.line {
+    width: 840px;
+    border: 1px solid #E6E6E6;
+    margin: auto;
+}
+
+div.row2 {
+    width: 750px;
+    height: 300px;
+    background-color: #C47451 /*#93FFE8*/;
+    border: 1px dashed white;
+    display: inline-block;
+    margin: 60px 20px 60px 20px;
+}
+
+div#blog-container {
+    text-align: center;
+}
+
+/* contact page */
+
+/*section#contact {
+    background-image: url(http://3.bp.blogspot.com/-4a_a41fX8pI/UTT2zb2AzfI/AAAAAAAAAnQ/F6tGjFoLij0/s1600/Teal+Chevron.jpg); 
+    height: 560px;
+}*/
+
+
