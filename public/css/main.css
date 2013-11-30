@@ -110,12 +110,13 @@ div#about-content p {
 
 /* blog page */
 
-div.row1 {
+div.blog-post {
     width: 750px;
     height: 300px;
     background-color: #93FFE8;
     border: 1px dashed white;
-    display: inline-block;
+    display: block;
+    margin: 0 auto;
 }
 
 div.line {
@@ -124,17 +125,8 @@ div.line {
     margin: 60px auto;
 }
 
-div.row2 {
-    width: 750px;
-    height: 300px;
-    background-color: rgb(224,105,100);
-    border: 1px dashed white;
-    display: inline-block;
-    
-}
+section#blog {
 
-div#blog-container {
-    text-align: center;
 }
 
 /* contact page */

@@ -1,13 +1,9 @@
 <section id="blog">
-  <div id="blog-container">
-    <div id= "the-prelude" class="row1"></div>
-    <div class="line"></div>
-    <div id= "week-3" class="row2">
-      <% @sorted_posts.each do |post_name, date| %>
+    <% @sorted_posts.each do |post_name, date| %>
+      <div class="blog-post">
         <%= erb("/posts/#{post_name}".to_sym, layout: false) %>
-      <% end %>
-    </div>
-    <div class="line"></div>
-  </div>
+      </div>
+      <div class="line"></div>
+    <% end %>
 </section>
 
