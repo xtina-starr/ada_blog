@@ -112,11 +112,17 @@ div#about-content p {
 
 div.blog-post {
     width: 750px;
-    height: 750px;
+    height: auto;
     background-color: #93FFE8;
     border: 1px dashed white;
     display: block;
     margin: 0 auto;
+    font-family: 'Roboto Slab',serif;
+    padding: 25px;
+}
+
+div#blog p {
+    font-family: 'Roboto Slab',serif;
 }
 
 div.line {
