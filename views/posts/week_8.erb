@@ -1,0 +1,25 @@
+date 2013-12-22
+
+<div class='style-posts'>
+
+  <h2>Week 8</h2>
+  <h3>Konami Code Part 1</h3>
+
+  <p>
+    So you know how sometimes you’re working on something and you’re not really sure how you got it to work, but you managed to hack it together. If you don’t then you’re probably a programming genius and way smarter than me. Seeing how I’ve been programming for two months, I hack a lot of things until they work. Any who this was the case for the kanomi code that I put in, Scamazon, a group project I was a part of creating for class. I used JavaScript to make text flash on the screen after the user enters in the kanomi code. I figured I’d write a two part blog post going over how I accomplished it
+  </p>
+
+  <p>
+    I put the text on the home page and wrapped a div around it with the id of ‘kanomi’ and styled it with CSS. After getting the text to appear how I wanted, I set the display property to none and used some JavaScript magic to handle the rest. I found a great kanomi code JS tutorial online from <a href="http://www.yourinspirationweb.com/en/fun-with-javascript-jquery-and-konami-code/">yourinspirationweb.com</a>. 
+  </p>
+
+  <img src="images/konami.jpg" alt="konami code">
+
+  <p>
+    While this code is still at little bit magic for me. I was able to develop a general and very basic overview of what the code is doing. With the ready function, the code will be executed once the document is finished loading. The variable keys is the empty array that will hold the respective keystrokes that the user types in. The variable konami contains a string of the correct keystrokes to activate the action. 
+  </p>
+
+  <p>
+    By calling .keydown, the keydown event is sent to an element when the user first presses a key on the keyboard. In this case I think the event is the document. The keydown pass the e function which pushes the keystroke’s value into the variable keys. The if conditional statement converts the keys variable to a string and if it matches the konami string it executes code to make the text appear and disappear. Stay toned for the next post, for the second part of the explanation of how jQuery is used to make the text flash.
+  </p>
+</div>
