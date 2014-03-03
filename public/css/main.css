@@ -178,5 +178,14 @@ img#api {
 }
 
 
+div.playlistic img {
+    width: 500px;
+    height: 500px;
+}
+
+div.playlistic {
+    text-align: center;
+}
+
 
 

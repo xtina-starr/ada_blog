@@ -1,0 +1,28 @@
+date: 2014-3-2
+
+<h1>FizzBuzz</h1>
+
+<p>
+  This past week Katrina Owens spoke to our class remotely. She talked about refactoring, testing, and writing better code. One of the things she said that really stuck out to me was sharpening your tools. She told us how she would refine her skills by solving general and even small problems but in different ways. She would take a problem and figure out a different ways to solve it. I decided I would do that with the problem FizzBuzz.
+</p>
+
+<p>
+  If you aren't familiar with the FizzBuzz problem, it's a program that prints the numbers from 1 to 100. But for multiples of three prints “Fizz” instead of the number and for the multiples of five prints “Buzz". For numbers which are multiples of both three and five prints “FizzBuzz”."
+</p>
+
+<p>
+  Here is my first attempt at FizzBuzz in Ruby:
+</p>
+
+<pre style="background:#000;color:#f8f8f8">(<span style="color:#3387cc">1</span>..<span style="color:#3387cc">100</span>).each <span style="color:#e28964">do </span>|<span style="color:#3e87e3">n</span>|
+  <span style="color:#e28964">if</span> n <span style="color:#e28964">%</span> <span style="color:#3387cc">15</span> <span style="color:#e28964">==</span> <span style="color:#3387cc">0</span> 
+    puts <span style="color:#65b042">"FizzBuzz"</span>
+  <span style="color:#e28964">elsif</span> n <span style="color:#e28964">%</span> <span style="color:#3387cc">5</span> <span style="color:#e28964">==</span> <span style="color:#3387cc">0</span>
+    puts <span style="color:#65b042">"Buzz"</span>
+  <span style="color:#e28964">elsif</span> n <span style="color:#e28964">%</span> <span style="color:#3387cc">3</span> <span style="color:#e28964">==</span> <span style="color:#3387cc">0</span>
+    puts <span style="color:#65b042">"Fizz"</span>
+  <span style="color:#e28964">else</span>
+    puts n
+  <span style="color:#e28964">end</span>
+<span style="color:#e28964">end</span> 
+</pre>
