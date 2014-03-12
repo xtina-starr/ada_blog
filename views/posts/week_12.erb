@@ -4,7 +4,7 @@ date: 2014-2-2
   <h1>RESTful APIs</h1>
 
   <p>
-    I’ve recently taken an interest in system design and architecture. This is largely due to the fact that as a new programmer, I find it insanely difficult to develop or create a web application when I don’t have a clear understanding of what I’m building and how each component works together. I’m a big picture kind of girl and I like to know the why and the how. The other day I was reading a blog post that discussed the stack of a particular tech company I’m fond of when I came across the term RESTful API. I had heard of the term RESTful as we have used the term in class, but I was thrown off when I saw it in the front of API so this blog post will serve the post of demystifying the seemingly scary buzz word.
+    I’ve recently taken an interest in system design and architecture. This is largely due to the fact that as a new programmer, I find it insanely difficult to develop or create a web application when I don’t have a clear understanding of what I’m building and how each component works together. I’m a big picture kind of girl and I like to know the why and the how. The other day I was reading a blog post that discussed the stack of a particular tech company I’m fond of when I came across the term RESTful API. I had heard of the term RESTful as we have used the term in class, but I was thrown off when I saw it in the front of API so this blog post will tackle the task of demystifying a seemingly scary buzz word.
   </p>
 
   <p>
@@ -12,14 +12,41 @@ date: 2014-2-2
   </p>
 
   <ol>
-    <li>A GET request: like when you type in a url all to retrieve a websites content.</li>
-    <li>A POST request: like hitting the submit button to post a comment.</li>
-    <li>A PUT/PATCH request: this could be changing your Twitter handle name</li>
+    <li>A GET request: like when you type in a url to retrieve a website's content.</li>
+    <li>A POST request: like hitting the submit button to post a comment on Facebook.</li>
+    <li>A PUT/PATCH request: this could be changing your Twitter handle name.</li>
     <li>A DELETE request: an example of this is when you delete a spammy commit off of your Facebook timeline.</li>
   </ol>
 
   <p>
-    REST is wonderful and organized! API’s aren’t so bad either (with the exception of Tumblr's APIs). APIs can really mean a lot of things, but in the context of web APIs they are simply a way for computers to talk to one another and exchange data. For example, in a group project we used Twitter’s API to get public tweets to be used in our aggregated feeder web application.
+    REST is wonderful and organized! API’s aren’t so bad either (with the exception of Tumblr's APIs). APIs can really mean a lot of things, but in the context of web APIs they are simply a way for computers to talk to one another and exchange data. For example, in a <a href="birds-eye.herokuapp.com/">group project</a> we used Twitter’s API to get public tweets to be used in our aggregated feeder web application.
   </p>
 
+  <p>
+    Rails applications are notorious for using RESTful HTTP methods when defining routes. Below is an example my routes file for a List app I create for class.
+  </p>
+
+  <pre style='color:#d1d1d1;background:#000000;'><html><body style='color:#d1d1d1; background:#000000; '><pre>
+  root to: <span style='color:#00c4c4; '>"welcome#index"</span>
+
+    <span style='color:#9999a9; '># Session</span>
+    get <span style='color:#00c4c4; '>"/session/new"</span>, to: <span style='color:#00c4c4; '>'session#new'</span>, as: :signin
+    post <span style='color:#00c4c4; '>'session'</span>, to: <span style='color:#00c4c4; '>'session#create'</span>, as: :create_session
+    get <span style='color:#00c4c4; '>'/signout'</span>, to: <span style='color:#00c4c4; '>'session#sign_out'</span>, as: :signout
+
+    <span style='color:#9999a9; '># Users</span>
+    get <span style='color:#00c4c4; '>'/users/new'</span>, to: <span style='color:#00c4c4; '>'users#new'</span>, as: :new_user
+    post <span style='color:#00c4c4; '>'/users'</span>, to: <span style='color:#00c4c4; '>'users#create'</span>, as: :create_user
+    get <span style='color:#00c4c4; '>'/profile'</span>, to: <span style='color:#00c4c4; '>'users#show'</span>, as: :user 
+
+    <span style='color:#9999a9; '># Lists</span>
+    get <span style='color:#00c4c4; '>'lists'</span>, to: <span style='color:#00c4c4; '>'lists#index'</span>, as: :lists
+    get <span style='color:#00c4c4; '>'lists/new'</span>, to: <span style='color:#00c4c4; '>'lists#new'</span>, as: :new_list
+    post <span style='color:#00c4c4; '>'lists'</span>, to: <span style='color:#00c4c4; '>'lists#create'</span>
+    get <span style='color:#00c4c4; '>'lists/:id'</span>, to: <span style='color:#00c4c4; '>'lists#show'</span>, as: :list
+
+    <span style='color:#9999a9; '># Items</span>
+    get <span style='color:#00c4c4; '>'items/new'</span>, to: <span style='color:#00c4c4; '>'items#new'</span>, as: :new_item
+    post <span style='color:#00c4c4; '>'items'</span>, to: <span style='color:#00c4c4; '>'items#create'</span>, as: :items
+  </pre>
 </div>
