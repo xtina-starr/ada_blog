@@ -1,0 +1,34 @@
+date: 2014-3-8
+
+<h1>Project Update</h1>
+
+<p>
+  I bet you are wondering how my side project is going. Well, in case you were it’s awesome. I finally got my hands dirty in some code to produce my first release. The first bits of code for me are always the hardest. After creating a landing page, I moved to creating a model that would host my Playlist class. In my Playlist class I created a class method called get_playlist_by_similar_artist. It looked like this:
+</p>
+
+
+<div id="code" style="width: 50%;">
+<pre>
+<span style='color:#e66170; font-weight:bold; '>def</span> self<span style='color:#d2cd86; '>.</span>get_playlist_by_similar_artist
+  HTTParty<span style='color:#d2cd86; '>.</span>get<span style='color:#d2cd86; '>(</span><span style='color:#00c4c4; '>"http://developer.echonest.com/api/v4/playlist/static?api_key=#{ENV["</span><br>ECHO_API_KEY<span style='color:#00c4c4; '>"]}&amp;artist=beatles&amp;format=json&amp;results=10&amp;type=artist-radio&amp;bucket=id:<span></span><br><span></span>spotify-WW&amp;bucket=tracks"</span><span style='color:#d2cd86; '>)</span>
+<span style='color:#e66170; font-weight:bold; '>end</span>
+</code>
+</pre>
+</div>
+
+
+<p>
+  I hard coded in some parameters just so that I could play around in the rails console and see what the response object looked like. It wasn’t pretty. So I used the niffy parsed_response method that comes with the HTTParty gem. I quickly realized why people use gems. It’s because much of the dirty work is done for you. Even after parsing the response it was still pretty convoluted. This is when I knew I needed to revisit my objectives. Allow a user to input an artist, press go, and return a playlist of similar artist.
+</p>
+
+<p>
+  I had a response with tracks somewhere buried in it, along with a spotify iframe that once I pulled the tracks out I could plug the songs into. Sounds simple right. Not so much. Once I got to the songs hash and iterated over each song I realized it would return an artist but some of them did have tracks. Thank goodness for conditional statements. After this I ran in to my next hurdle. I have gotten an array of songs, but for some reason some of the elements are nil. Did you know there is a method for arrays that removes nil elements? Now you do, it’s called compact. This is one of the perks of my side project. By consuming the API without a gem it’s forcing me to sharpen my Ruby chops.
+</p>
+
+<p>
+  There were several things I had to do to my code to essentially get the tracks into a string that would be used to build the iframe playlist. Take a look at my code on <a href="https://github.com/xtina-starr/playlistic">github</a> to see what I did. Then checkout my app hosted on <a href="http://playlistic.herokuapp.com/">heroku</a>.
+</p>
+
+<p>
+  Users need to be Spotify users in order to play the playlist, but that’s a issue I’m still tabling for now.
+</p>
