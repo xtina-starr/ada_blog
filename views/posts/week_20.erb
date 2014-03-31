@@ -1,0 +1,32 @@
+date: 2014-3-30
+
+<h1>CarrierWave Gem</h1>
+
+<p>
+  I spent this week doing a spike to learn how I could potentially work with file uploading for my capstone project. I also looked into front end css concepts as well but spent most of my time working with carrierwave and researching. I used the carrierwave gem and scaffold for the images, audio, and video models and controllers. Thanks to the railscast on carrierwave, it was pretty easy to figure out how to implement it. 
+</p>
+
+<p>
+  When you install the carrierwave and minimagick gem along with generating an uploader you are pretty much set to go. By generating the uploader it creates an image file (or whatever you name the file). When you open there is a few things you need to configure it. For example, you need to include minimagick on line 7. The rails cast tells you to use RMagick, but it didn't work when I used this gem. Also, if you would like create a different version of your uploaded file like a thumbnail for example, you need to uncomment lines 35-37. You can name what you would like to call the other version of the image and give it the method you would like the image to be resized with. An example is below.
+</p>
+
+<pre style='color:#d1d1d1;background:#000000;'><html><body style='color:#d1d1d1; background:#000000; '><pre>
+<span style='color:#9999a9; '># Create different versions of your uploaded files:</span>
+  version :thumb <span style='color:#e66170; font-weight:bold; '>do</span>
+    process :resize_to_limit <span style='color:#d2cd86; '>=</span>> <span style='color:#d2cd86; '>[</span><span style='color:#008c00; '>200</span>, <span style='color:#008c00; '>200</span><span style='color:#d2cd86; '>]</span>
+  <span style='color:#e66170; font-weight:bold; '>end</span>
+</pre>
+
+<p>
+  In order to get the image uploader to work you will also need to mount the loader in the model. An example of that for the images model is below.
+</p>
+
+<pre style='color:#d1d1d1;background:#000000;'><html><body style='color:#d1d1d1; background:#000000; '><pre>
+<span style='color:#e66170; font-weight:bold; '>class</span> Image &lt; ActiveRecord::Base
+  mount_uploader :image_file, ImageUploader
+<span style='color:#e66170; font-weight:bold; '>end</span>
+</pre>
+
+<p>
+  After that is configured you can start uploading images and/or generate other uploaders to add different types of files (i.e. video or audio).
+</p>
