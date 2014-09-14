@@ -1,0 +1,20 @@
+date: 2014-1-19
+
+<div class='style-posts'>
+  <h1>Konami Code Part 2</h1>
+  <p>
+    Confession…I had no idea what I was doing for part 1 of the Konami post. I thought by writing about it, it would help me understand the code a little better and it did to an extent. However, it’s amazing what a weeks worth of intro JavaScript will do. Pardon my attempt to fake it until I make and allow me to explain the code properly.
+  </p>
+
+  <p>
+    Beginning on line 18, the event listener executes the code once the document is finished loading. This is handed by the event listener .ready. As mentioned in part 1, there are two important variables. First, keys which is an empty array and second, konami, which is a string containing the correct keystrokes. Keystrokes? So each key on the keyboard correlates to a numeric value. The numbers in the string are that of up, up, down, down, left, right, left, right, b, a which is the Konami code.
+  </p>
+
+  <p>
+    Another significant event listener in this code is the .keydown. The keydown fires the callback (code to be run when the event is triggered). When a key is pressed the value of  it is pushed into the empty array with the .push method. The conditional if statement converts the keys in the once empty array to a string and matches it against konami, the variable containing the correct value. If the string does contain the correct value, the code gets to the second or nested conditional statement, which pretty much shows the element if it is hidden and hides it if it is visible. This is done through the setInterval function.  The setTimeout function clears the interval after 4 seconds (4000 milliseconds), by you guessed it the clearInterval function. 
+  </p>
+
+  <p>
+    That may seem really confusing, but after understanding some basic jQuery and JavaScript it makes a lot more sense.
+  </p>
+</div>

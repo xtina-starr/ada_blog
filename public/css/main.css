@@ -114,11 +114,16 @@ div#about-content p {
 div.blog-post {
     width: 750px;
     height: 300px;
-    /*height: auto;*/
     background-color: #93FFE8;
     border: 1px dashed white;
     display: block;
     margin: 0 auto;
+    font-family: 'Roboto Slab',serif;
+    padding: 25px;
+}
+
+div#blog p {
+    font-family: 'Roboto Slab',serif;
 }
 
 div#blog p {
@@ -131,8 +136,8 @@ div.line {
     margin: 60px auto;
 }
 
-section#blog {
-
+img#konami-code {
+    width: 500px;
 }
 
 /* contact page */
@@ -173,6 +178,19 @@ div#contact {
     border-bottom: 2px solid #333;
 }*/
 
+img#api {
+    margin-left: 65px;
+}
+
+
+div.playlistic img {
+    width: 500px;
+    height: 500px;
+}
+
+div.playlistic {
+    text-align: center;
+}
 
 
 
