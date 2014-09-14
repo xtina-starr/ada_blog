@@ -77,6 +77,7 @@ div#background-img {
     background-image: url(http://3.bp.blogspot.com/-4a_a41fX8pI/UTT2zb2AzfI/AAAAAAAAAnQ/F6tGjFoLij0/s1600/Teal+Chevron.jpg); 
     padding-top: 60px;
     padding-bottom: 60px;
+    height: auto;
 }
 
 /* home page */
@@ -113,10 +114,15 @@ div#about-content p {
 div.blog-post {
     width: 750px;
     height: 300px;
+    /*height: auto;*/
     background-color: #93FFE8;
     border: 1px dashed white;
     display: block;
     margin: 0 auto;
+}
+
+div#blog p {
+    font-family: 'Roboto Slab',serif;
 }
 
 div.line {
